@@ -2034,20 +2034,12 @@
 		status = "okay";
 	};
 
-	dummy_venc {
-		compatible = "amlogic, dummy_venc";
-		status = "okay";
-		clocks = <0x2 0x56 0x2 0x50 0x2 0x51 0x2 0x55 0x2 0x4e 0x2 0x4f 0x2 0x5d 0x2 0x5f>;
-		clock-names = "encp_top_gate", "encp_int_gate0", "encp_int_gate1", "venci_top_gate", "enci_int_gate0", "enci_int_gate1", "encl_top_gate", "encl_int_gate";
-		phandle = <0xe2>;
-	};
-
 	canvas {
 		compatible = "amlogic, meson, canvas";
 		dev_name = "amlogic-canvas";
 		status = "okay";
 		reg = <0x0 0xff638000 0x0 0x2000>;
-		phandle = <0xe3>;
+		phandle = <0xe2>;
 	};
 
 	ge2d {
@@ -2075,7 +2067,7 @@
 		#address-cells = <0x2>;
 		#size-cells = <0x2>;
 		ranges;
-		phandle = <0xe4>;
+		phandle = <0xe3>;
 
 		io_cbus_base {
 			reg = <0x0 0xffd00000 0x0 0x100000>;
@@ -2181,7 +2173,7 @@
 		logo_addr = "0x7f800000";
 		mem_alloc = <0x0>;
 		pxp_mode = <0x0>;
-		phandle = <0xe5>;
+		phandle = <0xe4>;
 	};
 
 	emmc@ffe07000 {
@@ -2200,7 +2192,7 @@
 		max-frequency = <0xbebc200>;
 		non-removable;
 		disable-wp;
-		phandle = <0xe6>;
+		phandle = <0xe5>;
 
 		emmc {
 			pinname = "emmc";
@@ -2241,7 +2233,7 @@
 		cap-mmc-highspeed;
 		max-frequency = <0x5f5e100>;
 		disable-wp;
-		phandle = <0xe7>;
+		phandle = <0xe6>;
 
 		sd {
 			pinname = "sd";
@@ -2283,7 +2275,7 @@
 		cap-mmc-highspeed;
 		max-frequency = <0x5f5e100>;
 		disable-wp;
-		phandle = <0xe8>;
+		phandle = <0xe7>;
 
 		sd {
 			pinname = "sd";
@@ -2324,7 +2316,7 @@
 		cap-mmc-highspeed;
 		max-frequency = <0x5f5e100>;
 		disable-wp;
-		phandle = <0xe9>;
+		phandle = <0xe8>;
 
 		sdio {
 			pinname = "sdio";
@@ -2359,7 +2351,7 @@
 		plat-num = <0x2>;
 		plat-part-0 = <0x48>;
 		plat-part-1 = <0x49>;
-		phandle = <0xea>;
+		phandle = <0xe9>;
 
 		bootloader {
 			enable_pad = "ce0";
@@ -2428,7 +2420,7 @@
 		status = "okay";
 		compatible = "amlogic, meson-cooldev";
 		device_name = "mcooldev";
-		phandle = <0xeb>;
+		phandle = <0xea>;
 
 		cooling_devices {
 
@@ -2494,7 +2486,7 @@
 			polling-delay-passive = <0x64>;
 			sustainable-power = <0x5b4>;
 			thermal-sensors = <0x4b 0x0>;
-			phandle = <0xec>;
+			phandle = <0xeb>;
 
 			trips {
 
@@ -2502,7 +2494,7 @@
 					temperature = <0x124f8>;
 					hysteresis = <0x1388>;
 					type = "passive";
-					phandle = <0xed>;
+					phandle = <0xec>;
 				};
 
 				trip-point@1 {
@@ -2516,14 +2508,14 @@
 					temperature = <0x17318>;
 					hysteresis = <0x1388>;
 					type = "hot";
-					phandle = <0xee>;
+					phandle = <0xed>;
 				};
 
 				trip-point@3 {
 					temperature = <0x1adb0>;
 					hysteresis = <0x3e8>;
 					type = "critical";
-					phandle = <0xef>;
+					phandle = <0xee>;
 				};
 			};
 
@@ -2560,7 +2552,7 @@
 			polling-delay-passive = <0x64>;
 			sustainable-power = <0x866>;
 			thermal-sensors = <0x51 0x1>;
-			phandle = <0xf0>;
+			phandle = <0xef>;
 
 			trips {
 
@@ -2568,28 +2560,28 @@
 					temperature = <0xea60>;
 					hysteresis = <0x1388>;
 					type = "passive";
-					phandle = <0xf1>;
+					phandle = <0xf0>;
 				};
 
 				trip-point@1 {
 					temperature = <0x124f8>;
 					hysteresis = <0x1388>;
 					type = "passive";
-					phandle = <0xf2>;
+					phandle = <0xf1>;
 				};
 
 				trip-point@2 {
 					temperature = <0x14c08>;
 					hysteresis = <0x1388>;
 					type = "hot";
-					phandle = <0xf3>;
+					phandle = <0xf2>;
 				};
 
 				trip-point@3 {
 					temperature = <0x1adb0>;
 					hysteresis = <0x3e8>;
 					type = "critical";
-					phandle = <0xf4>;
+					phandle = <0xf3>;
 				};
 			};
 		};
@@ -2656,7 +2648,7 @@
 		reg = <0x0 0xff630218 0x0 0x4>;
 		mem_size = <0x0 0x100000>;
 		status = "okay";
-		phandle = <0xf5>;
+		phandle = <0xf4>;
 	};
 
 	aml_dma {
@@ -2695,7 +2687,7 @@
 		clocks = <0x2 0x61>;
 		clock-names = "efuse_clk";
 		status = "disabled";
-		phandle = <0xf6>;
+		phandle = <0xf5>;
 	};
 
 	cpu_ver_name {
@@ -2776,7 +2768,7 @@
 		part-12 = <0x60>;
 		part-13 = <0x61>;
 		part-14 = <0x62>;
-		phandle = <0xf7>;
+		phandle = <0xf6>;
 
 		logo {
 			pname = "logo";
@@ -2931,7 +2923,7 @@
 			compatible = "amlogic, aml_secos_memory";
 			reg = <0x0 0x5300000 0x0 0x2000000>;
 			no-map;
-			phandle = <0xf8>;
+			phandle = <0xf7>;
 		};
 
 		linux,meson-fb {
@@ -3009,13 +3001,13 @@
 	dummy-battery {
 		compatible = "amlogic, dummy-battery";
 		status = "disabled";
-		phandle = <0xf9>;
+		phandle = <0xf8>;
 	};
 
 	dummy-charger {
 		compatible = "amlogic, dummy-charger";
 		status = "disabled";
-		phandle = <0xfa>;
+		phandle = <0xf9>;
 	};
 
 	cvbsout {
@@ -3429,12 +3421,12 @@
 				dai-tdm-slot-num = <0x8>;
 				dai-tdm-slot-width = <0x20>;
 				system-clock-frequency = <0x1770000>;
-				phandle = <0xfb>;
+				phandle = <0xfa>;
 			};
 
 			codec {
 				sound-dai = <0x88 0x88>;
-				phandle = <0xfc>;
+				phandle = <0xfb>;
 			};
 		};
 
@@ -3456,7 +3448,7 @@
 
 			codec {
 				sound-dai = <0x88 0x88 0x85>;
-				phandle = <0xfd>;
+				phandle = <0xfc>;
 			};
 		};
 
@@ -3533,7 +3525,7 @@
 		frequency = <0x2ebae40>;
 		dividor = <0x31>;
 		status = "okay";
-		phandle = <0xfe>;
+		phandle = <0xfd>;
 	};
 
 	cpu_opp_table0 {
@@ -3765,7 +3757,6 @@
 		aocec = "/aocec";
 		vdin0 = "/vdin0";
 		vdin1 = "/vdin1";
-		dummy_venc = "/dummy_venc";
 		canvas = "/canvas";
 		codec_io = "/codec_io";
 		meson_fb = "/meson-fb";
